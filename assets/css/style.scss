@@ -1,0 +1,136 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* ── Resume-specific overrides ─────────────────────────── */
+
+/* Tighten the header for a resume page */
+.page-header {
+  padding: 1.5rem 1rem;
+}
+.page-header h1 {
+  margin-bottom: 0.15rem;
+}
+
+/* Main content area */
+.main-content {
+  max-width: 54rem;
+  font-size: 1.02rem;
+}
+
+/* Contact bar */
+.contact-bar {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #586069;
+  margin-bottom: 1.5rem;
+}
+.contact-bar a {
+  color: #0366d6;
+  text-decoration: none;
+}
+.contact-bar a:hover {
+  text-decoration: underline;
+}
+
+/* Metrics strip */
+.metrics-strip {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 1rem 0.5rem;
+  margin: 1rem 0 1.5rem;
+  text-align: center;
+}
+.metrics-strip .metric {
+  flex: 1 1 18%;
+  min-width: 110px;
+}
+.metrics-strip .metric-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #159957;
+  line-height: 1.2;
+}
+.metrics-strip .metric-label {
+  font-size: 0.78rem;
+  color: #586069;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Section headings */
+.main-content h2 {
+  border-bottom: 2px solid #159957;
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.35rem;
+  color: #1b2a4a;
+}
+
+/* Job titles */
+.main-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.1rem;
+  font-size: 1.1rem;
+  color: #24292e;
+}
+
+/* Company/date line */
+.role-meta {
+  color: #586069;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 2rem;
+  margin: 0.5rem 0 1rem;
+}
+.skills-grid p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+/* Tighter lists */
+.main-content ul {
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.main-content li {
+  margin-bottom: 0.25rem;
+}
+.main-content li + li {
+  margin-top: 0;
+}
+
+/* Tech tags under each role */
+.tech-line {
+  font-size: 0.9rem;
+  color: #586069;
+  font-style: italic;
+  margin-top: 0.3rem;
+}
+
+/* Print friendly */
+@media print {
+  .page-header { display: none; }
+  .main-content { max-width: 100%; padding: 0; }
+  .metrics-strip { border: 1px solid #ccc; }
+  a { color: #000; text-decoration: none; }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .metrics-strip { flex-direction: column; align-items: center; }
+  .skills-grid { grid-template-columns: 1fr; }
+}

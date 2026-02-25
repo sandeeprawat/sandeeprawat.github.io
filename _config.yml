@@ -1,3 +1,5 @@
-theme: jekyll-theme-minimal
+remote_theme: pages-themes/cayman@v0.2.0
 title: Sandeep Singh Rawat
-description: Strategic Engineering Leader
+description: Strategic Engineering Leader | Microsoft Azure | 20+ Years
+plugins:
+  - jekyll-remote-theme
